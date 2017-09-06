@@ -52,8 +52,8 @@ run_analysis <- function() {
   
   tidy_data <- aggregate(subset_data[3:81],by=list(subset_data$subject,subset_data$activity),FUN=mean,na.rm=TRUE)
 
-  ##Write result into CSV file  
-  write.csv(tidy_data,file="./tidy_data.csv")
+  ##Write result into text file  
+  write.table(tidy_data,file="./tidy_data.txt",,row.name=FALSE)
 
   }
 
